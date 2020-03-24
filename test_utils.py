@@ -6,6 +6,7 @@ import unittest
 import utils
 
 class TestUtils(unittest.TestCase):
+
     def test_fact(self):
         self.assertEqual(utils.fact(0), 1)
         self.assertEqual(utils.fact(1), 1)
@@ -19,6 +20,7 @@ class TestUtils(unittest.TestCase):
     
     def test_integrate(self):
         self.assertEqual(utils.integrate("2*x", -4, 2), -12)
+        
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)
