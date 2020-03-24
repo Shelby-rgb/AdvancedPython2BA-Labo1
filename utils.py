@@ -2,39 +2,17 @@
 # Math library
 # Author: Sébastien Combéfis
 # Version: February 8, 2018
-from math import sqrt
-def fact(n):
-	assert n >= 0, 'n doit être positif'
-	result = int(n)
-	i = 1
-	while i < n :
-		result = result*(n-i)
-		i += 1
 
-	return result		
+def fact(n):
+	"""Computes the factorial of a natural number.
+	
+	Pre: -
+	Post: Returns the factorial of 'n'.
+	Throws: ValueError if n < 0
+	"""
+	pass
 
 def roots(a, b, c):
-
-	d = b**2-4*a*c
-
-	if d < 0 :
-		a = ()
-		
-	elif d == 0 :
-		root_1 = -b/(2*a)
-		root_2 = b/(2*a)
-		a = (root_1, root_2)
-		
-	else :
-		root_1 = (-b+sqrt(d))/(2*a)
-		root_2 = (-b-sqrt(d))/(2*a)
-		
-
-		a = (root_1, root_2)
-	
-	return a	
-
-
 	"""Computes the roots of the ax^2 + bx + x = 0 polynomial.
 	
 	Pre: -
@@ -60,5 +38,5 @@ def integrate(function, lower, upper):
 
 if __name__ == '__main__':
 	print(fact(5))
-	print(roots(5, 6, -2))
+	print(roots(1, 0, 1))
 	print(integrate('x ** 2 - 1', -1, 1))
